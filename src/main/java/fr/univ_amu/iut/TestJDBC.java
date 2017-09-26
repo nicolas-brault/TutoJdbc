@@ -5,9 +5,9 @@ import java.sql.*;
 
 public class TestJDBC {
 	// Chaine de connexion
-	static final String CONNECT_URL = "jdbc:mysql://localhost:3306/gestionPedaBD";
-	static final String LOGIN = "monUser";
-	static final String PASSWORD = "monPassword";
+	static final String CONNECT_URL = "jdbc:mysql://mysql-pastaga.alwaysdata.net:3306/pastaga_jdbc";
+	static final String LOGIN = "pastaga_jdbc";
+	static final String PASSWORD = "Pastisdu13";
 	// La requete de test
 	static final String req = "SELECT NUM_ET, NOM_ET, PRENOM_ET " +
 	                          "FROM ETUDIANT " +
@@ -24,7 +24,7 @@ public class TestJDBC {
 			System.out.println("Execution de la requete : " + req );
 			ResultSet rset = stmt.executeQuery(req);
 			// Affichage du resultat
-			while (rset.next()){	
+			while (rset.next()){
 				System.out.print(rset.getInt("NUM_ET") + " ");
 				System.out.print(rset.getString("NOM_ET") + " ");
 				System.out.println(rset.getString("PRENOM_ET"));
